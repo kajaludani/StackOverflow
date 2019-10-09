@@ -1,0 +1,28 @@
+.loginBox {
+    padding-top: 30px;
+    display: flex;
+  justify-content: center;
+ }
+ .mat-form-field {
+   width: 100%;
+   /* min-width: 300px; */
+ }
+
+ mat-card-title,
+ mat-card-content {
+   display: flex;
+   justify-content: center;
+ }
+ mat-card{
+     width: 80%;
+     margin-top: 40px;
+ }
+ .ttl{
+     align-content: center;
+ }
+ .panelText{
+    font-family:Apple Chancery, cursive;
+    color:#3F51B5;
+    display:flex;
+    justify-content: center
+  }

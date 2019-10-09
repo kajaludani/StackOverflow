@@ -1,0 +1,27 @@
+<mat-toolbar>Ask Public Question</mat-toolbar>
+<form [formGroup]="questionForm">
+Question Title        
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Be specific and imagine you’re asking a question to another 
+          developer" 
+          formControlName="title" id="QuestionTitle"></textarea>
+        </mat-form-field>
+        Question Body
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Include all the information someone would need to answer your question" 
+           formControlName="body" ></textarea>
+        </mat-form-field>
+        Tags
+        <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Be Specific about tags" formControlName="tag" 
+            ></textarea>
+        </mat-form-field>
+      
+        <mat-card-actions>
+            
+          <button mat-raised-button type = "submit" color="primary" (click) = "postQuestion()">Create Question</button>
+
+        </mat-card-actions>
+
+      </form>
+      

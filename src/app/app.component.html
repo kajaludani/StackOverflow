@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+
+  <a class="logo">
+      <img src = "./assets/logo1.png" class ="icon-css">  
+    </a>
+    <button mat-button routerLink= ''>Queries</button>
+
+    <button mat-button routerLink= '/tags'>Tags</button>
+
+
+    <span class="spacer"></span>
+    <a *ngIf="!flag" routerLink="/signin" class="user-icon">  
+      <mat-icon >perm_identity</mat-icon>
+    </a>
+
+    <a *ngIf="flag" class="user-icon">  
+      <mat-icon class="example-icon" cursor = "pointer" (click) = "logout()">logout</mat-icon>
+    </a>
+
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+  

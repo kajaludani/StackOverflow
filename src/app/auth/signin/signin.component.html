@@ -1,0 +1,28 @@
+<div class = "loginBox">
+
+  <mat-card>
+
+    <mat-toolbar class= "panelText"><b>Welcome to QueryStack</b></mat-toolbar>
+
+    <form class="signin-form" [formGroup]="signinForm">
+    
+      <mat-form-field class="full-width">
+        <input matInput type="email" id="email" placeholder="Enter email" formControlName="email">
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <input matInput type="password" id="password" placeholder="Enter password" formControlName="password">
+      </mat-form-field>
+  
+      <mat-card-actions>
+        <button mat-raised-button type = "submit" (click)=" onLogin()" color="primary">Login</button>
+      </mat-card-actions>
+
+      <p>
+        <span>Are you new?</span>
+        <a routerLink="/signup">Create an account</a>
+      </p>
+
+    </form>
+  </mat-card>
+</div>

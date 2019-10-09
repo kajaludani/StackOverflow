@@ -1,0 +1,57 @@
+<mat-list *ngIf="question">
+
+        <ng-container>
+            <mat-toolbar class = "all">{{question?.title}}  
+                <button mat-raised-button class= "del" type="button" (click)="remove(question.id)" color="danger">Delete</button>
+            </mat-toolbar>
+                        
+            <mat-list-item class="description">
+                    {{question?.body}}
+            </mat-list-item>
+                        
+            <mat-list-item >
+                                
+                <mat-chip-list *ngIf="question">
+                                <mat-chip>Java </mat-chip>
+                                <!-- (click) = "clickTag()">{{question?.tag}} -->
+                                <mat-chip>Core</mat-chip>
+                                <mat-chip>Php</mat-chip>
+                </mat-chip-list>
+
+            </mat-list-item>
+        </ng-container>
+        </mat-list>
+
+        <mat-toolbar>Related Answers</mat-toolbar>
+
+        <mat-list *ngIf="question">
+        
+            <mat-card *ngFor="let answer of question.answers; let i = index; trackBy: trackByFn" >
+                    <mat-icon class="up">thumb_up</mat-icon>
+                    <mat-icon class="down">thumb_down</mat-icon>
+
+                            
+                            <mat-card-content class = "allAns">
+                            {{answer?.body}}
+                            </mat-card-content>
+                            <div *ngFor="let comment of answer.comments;">
+                                <span *ngIf="comment.body">{{comment.body}}</span>
+                                <mat-form-field class = "comments" minLength = 13 *ngIf="!comment.body">
+                                        <textarea [(ngModel)]="test" [name]="'input-'+i" matInput placeholder="comment"></textarea>
+                                        <button *ngIf="!comment.body" mat-raised-button class="com" type="button" (click) = "saveComment(i)" color="danger">Save Comment</button>
+                                        </mat-form-field>
+                            </div>
+                            <button mat-raised-button class="com" type="button" (click) = "addComment(i)" color="danger">Add Comment</button>
+
+                            <!-- <button mat-raised-button type="button" click = "textArea()" color="danger">Delete</button> -->
+            </mat-card>
+        </mat-list>   
+
+        <mat-form-field appearance="outline">
+            <textarea [(ngModel)]="answer" matInput placeholder="Post Relative Answer"></textarea>
+        </mat-form-field>
+        
+        <button mat-raised-button class="ans" type="button" (click)="saveAnswer()" color="primary">Post Answer</button>
+        
+        
+          

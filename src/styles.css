@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ariel', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.no-ellipsis {
+  white-space: normal !important;
+  text-overflow: initial !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.question-icon {
+  font-size: 2rem;
+}
+
+.logo, .user-icon {
+  color: #fff;
+}
+
+.spinner-wrapper {
+  text-align: center;
+  margin: 20px;
+}
+
+.spinner {
+  display: inline-block !important;
+}

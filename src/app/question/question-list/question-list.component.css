@@ -1,0 +1,22 @@
+.all-q{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+
+}
+mat-chip,mat-chip-list{
+    /* margin: 0px 15px 6px 4px; */
+    margin-right: 1%;
+}
+
+.Qtitle{
+    cursor: pointer;
+    color: blue;
+}
+
+.add-question {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
+  

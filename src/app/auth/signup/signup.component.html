@@ -1,0 +1,33 @@
+<div class = "loginBox">
+
+    <mat-card>
+        <mat-toolbar class= "panelText"><b>SignUp</b></mat-toolbar>
+
+    <form class="signup-form" [formGroup]="signupForm">
+
+    <mat-form-field class="full-width">
+      <input matInput type="text" id="userName" placeholder="Enter Username"
+      formControlName="userName">
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <input matInput type="email" id="email" placeholder="Enter email" formControlName="email">
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <input matInput type="password" id="password" placeholder="Enter password" formControlName="password">
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button type = "submit" (click)="onSignUp()" color="primary" 
+      [disabled]="!signupForm.valid">SignUp</button>
+    </mat-card-actions>
+
+    <p>
+      <span>Do you already have an account?</span>
+      <a routerLink="/signin">Sign In</a>
+    </p>
+
+  </form>
+  </mat-card>
+  </div>

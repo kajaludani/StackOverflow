@@ -1,0 +1,54 @@
+.all{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+
+}
+
+.allAns{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    padding-left: 7%;
+    width: 100%;
+}
+
+.comments{
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 12%;
+}
+
+.down{
+    padding-top:10px;
+    padding-left:10px;
+}
+mat-form-field{
+padding-left: 20px;
+box-sizing:80;
+width:80%;
+position: relative;
+}
+
+.ans{
+    margin-left: 72%;
+
+}
+.com{
+    margin-left: 12%;
+    font-size:12px;
+
+}
+
+.description {
+    height:auto;
+}
+.del{
+    margin-left: 40%;
+}
+mat-card-content{
+    display: inline;
+}
+
+mat-icon{
+    cursor: pointer;
+}

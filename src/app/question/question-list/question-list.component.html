@@ -1,0 +1,28 @@
+<div class="spinner-wrapper" *ngIf="isLoading">
+    <mat-progress-spinner class="spinner" color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+  
+  <mat-toolbar class = "all-q">All Questions  </mat-toolbar>
+    <mat-list *ngIf="!isLoading">
+      <ng-container  *ngFor="let question of questions">
+      <mat-list-item >
+        <a  class = "Qtitle" (click)="hey(question.id)" mat-line>{{question.title}}</a>
+        <h4 mat-line>{{question.body}}</h4>
+      </mat-list-item >
+      <mat-list-item >
+        <mat-chip-list  >
+        <!-- *ngFor="let tag of question.tags" -->
+        <mat-chip (click) = "clickTag()">{{question.tag}}</mat-chip>
+        </mat-chip-list>
+      </mat-list-item>
+      <!-- <button mat-raised-button type="button" (click)="remove(question.id)" color="danger">Delete</button> -->
+      <mat-divider></mat-divider>
+
+      </ng-container>
+    
+    </mat-list>
+
+    <button mat-raised-button class="add-question" (click) = "askQuestion()" color="primary" routerLink="signin">
+        <mat-icon>add</mat-icon> Ask Question
+      </button>

@@ -1,0 +1,16 @@
+<mat-tab-group>
+    <mat-tab label="QueryStack">
+      <app-question-list></app-question-list>
+    </mat-tab>
+    <mat-tab label="Tags">
+      <app-tags></app-tags>
+    </mat-tab>
+    <!-- <mat-tab label="Users">
+        <!-- <app-question-list sort="-answers"></app-question-list> -->
+      <!-- </mat-tab> -->
+  </mat-tab-group>
+  
+  <button mat-raised-button class="add-question" (click) = "askQuestion()" color="primary" routerLink="signin">
+    <mat-icon>add</mat-icon> Ask Question
+  </button>
+  
